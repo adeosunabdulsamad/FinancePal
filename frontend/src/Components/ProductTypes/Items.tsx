@@ -11,7 +11,7 @@ import {
 
 const Items = () => (
   <>
-    <ProductTypesContainer productType="Item Management">
+    <ProductTypesContainer productType="Account Management">
       <Endpoint
         endpoint="item"
         categories={itemCategories}
@@ -25,7 +25,7 @@ const Items = () => (
         endpoint="accounts"
         schema="/accounts/get"
         categories={accountsCategories}
-        description="Retrieve high-level information about all accounts associated with an item."
+        description="Retrieveinformation about all accounts associated with an user."
         transformData={transformAccountsData}
       />
     </ProductTypesContainer>

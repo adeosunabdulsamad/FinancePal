@@ -23,19 +23,16 @@ const Header = () => {
 
   return (
     <div className={styles.grid}>
-      <h3 className={styles.title}>Plaid Quickstart</h3>
+      <h3 className={styles.title}>FinancePal</h3>
 
       {!linkSuccess ? (
         <>
           <h4 className={styles.subtitle}>
-            A sample end-to-end integration with Plaid
+            Your Smart Financial Assistant
           </h4>
           <p className={styles.introPar}>
-            The Plaid flow begins when your user wants to connect their bank
-            account to your app. Simulate this by clicking the button below to
-            launch Link - the client-side component that your users will
-            interact with in order to link their accounts to Plaid and allow you
-            to access their accounts via the Plaid API.
+            You can link to any of your bank accounts using Plaid Link. 
+            This is a demo application that uses Plaid's API to fetch transactions and account information.
           </p>
           {/* message if backend is not running and there is no link token */}
           {!backend ? (
