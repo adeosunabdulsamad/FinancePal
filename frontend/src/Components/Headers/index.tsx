@@ -38,7 +38,7 @@ const Header = () => {
           {!backend ? (
             <Callout warning>
               Unable to fetch link_token: please make sure your backend server
-              is running and that your .env file has been configured with your
+              is running and that your .env file has been configured with the
               <code>PLAID_CLIENT_ID</code> and <code>PLAID_SECRET</code>.
             </Callout>
           ) : /* message if backend is running and there is no link token */
@@ -53,19 +53,11 @@ const Header = () => {
                 If you are on a Windows machine, please ensure that you have
                 cloned the repo with{" "}
                 <InlineLink
-                  href="https://github.com/plaid/quickstart#special-instructions-for-windows"
+                  href="https://github.com/adeosunabdulsamad/FinancePal?tab=readme-ov-file"
                   target="_blank"
                 >
                   symlinks turned on.
                 </InlineLink>{" "}
-                You can also try checking your{" "}
-                <InlineLink
-                  href="https://dashboard.plaid.com/activity/logs"
-                  target="_blank"
-                >
-                  activity log
-                </InlineLink>{" "}
-                on your Plaid dashboard.
               </div>
               <div>
                 Error Code: <code>{linkTokenError.error_code}</code>
@@ -114,14 +106,7 @@ const Header = () => {
             /* If not using the payment_initiation product, show the item_id and access_token information */ <>
               {isItemAccess ? (
                 <h4 className={styles.subtitle}>
-                  Congrats! By linking an account, you have created an{" "}
-                  <InlineLink
-                    href="http://plaid.com/docs/quickstart/glossary/#item"
-                    target="_blank"
-                  >
-                    Item
-                  </InlineLink>
-                  .
+                  Congrats, you have successfully linked a bank account!
                 </h4>
               ) : userToken ? (
                 <h4 className={styles.subtitle}>
@@ -130,7 +115,7 @@ const Header = () => {
               ) : (
                 <h4 className={styles.subtitle}>
                   <Callout warning>
-                    Unable to create an item. Please check your backend server
+                    Unable to link your bank. Please check your backend server
                   </Callout>
                 </h4>
               )}
